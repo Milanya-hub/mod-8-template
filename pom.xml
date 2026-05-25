@@ -108,6 +108,15 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>hse.java.practice.chatstomp.ChatStompApplication</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

@@ -111,7 +111,9 @@ class ChatStompEdgeCasesTest {
         session.subscribe("/topic/messages", mapHandler(queue));
 
         session.send("/app/send", Map.of("sender", "A", "text", "m1"));
+        Thread.sleep(100);
         session.send("/app/send", Map.of("sender", "A", "text", "m2"));
+        Thread.sleep(100);
         session.send("/app/send", Map.of("sender", "A", "text", "m3"));
 
         List<String> received = new ArrayList<>();
